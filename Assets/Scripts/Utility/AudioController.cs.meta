@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 4cb983f163bf22c4b91c3fb6db6ba892
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - sadMusic: {fileID: 8300000, guid: 8c6c3b9f9498fa040a52a9a444a5b27e, type: 3}
+  - chillMusic: {instanceID: 0}
+  - mainMenuMusic: {instanceID: 0}
+  - noiseSound: {fileID: 8300000, guid: badcb1745cdf2314182cf16d772fdad9, type: 3}
+  - buttonHover: {fileID: 8300000, guid: c349a4759afec8b4281f5079eac53318, type: 3}
+  - playClick: {fileID: 8300000, guid: b5bc161e69d790f4b8c005aa2a51a24b, type: 3}
+  - exitClick: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
