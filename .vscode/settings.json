@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "GAME-JAM-UKSW-main.sln"
+    "dotnet.defaultSolution": "newest.sln"
 }

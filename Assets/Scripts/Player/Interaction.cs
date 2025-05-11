@@ -19,7 +19,7 @@ namespace Player
          
         public void Apress(InputAction.CallbackContext action)
         {
-            if(Abutton.action.triggered && Cookingbrain.instance.state == Cookingbrain.cookingstate.isPlaying)
+            if(Abutton.action.triggered && Cookingbrain.instance.state == Cookingbrain.cookingstate.isPlaying&& Cookingbrain.instance.valbutton.Count != 1)
             {
                 Cookingbrain.instance.valbutton.Add(1);
                 
@@ -28,7 +28,7 @@ namespace Player
         
         public void Dpress(InputAction.CallbackContext action)
         {
-            if(Abutton.action.triggered && Cookingbrain.instance.state == Cookingbrain.cookingstate.isPlaying)
+            if(Dbutton.action.triggered && Cookingbrain.instance.state == Cookingbrain.cookingstate.isPlaying&& Cookingbrain.instance.valbutton.Count != 1)
             {
                 Cookingbrain.instance.valbutton.Add(2);
             }
@@ -36,15 +36,15 @@ namespace Player
         
         public void Spacepress(InputAction.CallbackContext action)
         {
-            if(Abutton.action.triggered && Cookingbrain.instance.state == Cookingbrain.cookingstate.isPlaying)
+            if(Spacebutton.action.triggered && Cookingbrain.instance.state == Cookingbrain.cookingstate.isPlaying&& Cookingbrain.instance.valbutton.Count != 1)
             {
                 Cookingbrain.instance.valbutton.Add(3);
             }
         }
-        public void Interact(InputAction.CallbackContext action)
-        {       
-            Debug.Log("from interact");
-        }
+        // public void Interact(InputAction.CallbackContext action)
+        // {       
+        //     Debug.Log("from interact");
+        // }
           public void Onclick(InputAction.CallbackContext context)
         {
             if (Mouse.current == null || !Mouse.current.leftButton.wasPressedThisFrame)
@@ -99,10 +99,14 @@ namespace Player
       
         }
         private void OnEnable() {
-            interactAction.action.performed +=Interact;
+            // interactAction.action.performed +=Interact;
+            Dbutton.action.performed += Dpress;
+            Abutton.action.performed += Apress;
+            Spacebutton.action.performed += Spacepress;
+
         }
          private void OnDisable() {
-            interactAction.action.performed -=Interact;
+            //interactAction.action.performed -=Interact;
         }
     }
 }
